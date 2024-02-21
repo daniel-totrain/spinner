@@ -3,31 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Randomizer Spinner</title>
-  <style>
-    #spinner {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 2px solid black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-  </style>
+  <title>Simple Randomizer</title>
 </head>
 <body>
-  <div id="spinner">Click 'Rotate' to spin</div>
-  <button onclick="rotate()">Rotate</button>
+  <h1>Random Name Generator</h1>
+  <p id="result">Click the button to generate a random name:</p>
+  <button onclick="generateRandomName()">Generate Name</button>
 
   <script>
-    function rotate() {
+    function generateRandomName() {
       var names = ['Catherine', 'Braeden', 'Daniel'];
-      var spinner = document.getElementById('spinner');
       var randomIndex = Math.floor(Math.random() * names.length);
-      spinner.textContent = names[randomIndex];
+      document.getElementById('result').textContent = names[randomIndex];
     }
   </script>
 </body>
